@@ -34,7 +34,7 @@ function Login() {
     type="text"
     id="txtPhoneNo"
     placeholder="Enter Phone No"
-    onChange={(e) => handleNameChange(e.target.value)}
+    onChange={(e) => handlePhoneNoChange(e.target.value)}
     />
 
     <button onClick={() => handleLogin()}>Save</button>
