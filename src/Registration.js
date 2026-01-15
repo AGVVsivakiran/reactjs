@@ -23,9 +23,9 @@ function Registration() {
       IsActive: 1
     };
     const url = 'https://localhost:44301/api/Test/Registration';
-    axios.post(url,data).then((result) => {
-      alert(result.data);      
-    }).catch((error)=>{
+    axios.post(url, data).then((result) => {
+      alert(result.data);
+    }).catch((error) => {
       alert(error);
     })
   }
