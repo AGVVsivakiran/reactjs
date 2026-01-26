@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [name, setName] = useState("");
@@ -21,6 +22,10 @@ function Login() {
     }).catch((error) => {
       alert(error);
     })
+  }
+  const navigate = useNavigate();
+  const handledashboard = () => {
+    navigate("/dashboard");
   }
   return (
     <>
@@ -56,7 +61,10 @@ function Login() {
               />
             </div>
           </form>
-          <button onClick={() => handleLogin()}
+          {/* <button onClick={() => handleLogin()}
+            type="button"
+            className="w-full  bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Save</button> */}
+          <button onClick={handledashboard}
             type="button"
             className="w-full  bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Save</button>
         </div>
